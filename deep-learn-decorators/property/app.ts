@@ -75,7 +75,7 @@ function MinLength(limit: number) {
 }
 
 // external validate
-const AgeValidator = (instance: any) => {
+const validator = (instance: any) => {
   const constructor = instance.constructor;
   const metadataKeys = Object.keys(constructor);
 
@@ -138,7 +138,7 @@ try {
   const soheilUser = new User("soheil", 21);
 
   // run external validation
-  // AgeValidator(soheilUser);
+  // validator(soheilUser);
 
   console.log("soheilUser => ", soheilUser.info());
 } catch (error) {
